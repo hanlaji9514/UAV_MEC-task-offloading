@@ -20,3 +20,15 @@ Fuhui Zhou, Yongpeng Wu, Haijian Sun, Zheng Chu, ""UAV-Enabled Mobile Edge Compu
 [**Joint Task Offloading and Trajectory Optimization for UAV-Enabled Mobile Edge Computing**](https://ieeexplore.ieee.org/document/8883173)  
 研究了一種無人機(UAV)支援的移動邊緣網路，其中UAV具有固定翼或旋翼，被派遣提供通信和移動邊緣計算(MEC)服務給地面終端(GTs)。為了最小化能耗以延長UAV的續航力，利用聯合優化其3D軌跡和GTs之間的任務緩存策略，以節省飛行推進和GT任務所花費的能量。這種聯合軌跡-任務-緩存問題難以被最優解決，因為它是非凸的，並涉及多個約束。為了解決這個問題，將任務卸載和緩存的優化重新表述為兩個可處理的線性規劃(LP)問題，並將UAV軌跡的優化分別分解為三個凸二次受限二次規劃(QCQP)問題，分別是水平軌跡、垂直軌跡和UAV的飛行時間。然後提出了一種基於塊坐標下降法的算法，通過一個連續凸優化(SCO)過程迭代地求解形成的子問題。在算法收斂到預定精度後，就可以得到聯合問題的一個高品質次優解。數值結果顯示，所提出的解決方案顯著優於基準解決方案。  
 Haibo Mei, Kezhi Wang, Dongdai Zhou, Kun Yang, "Joint Task Offloading and Trajectory Optimization for UAV-Enabled Mobile Edge Computing," in IEEE Access, vol. 7, pp. 156476-156488, 2020.
+
+# With Deep Learning
+[**Unmanned-Aerial-Vehicle-Assisted Computation Offloading for Mobile Edge Computing Based on Deep Reinforcement Learning**](https://ieeexplore.ieee.org/document/9212373)   
+提出了基於深度強化學習（UACODRL）的UAV輔助MEC計算卸載，以最小化總成本，該成本是延遲、能源消耗和頻寬成本的加權和。我們首先使用K-Means算法進行分類以降低動作空間的維度。隨後，使用UACODRL找到接近最優的卸載方案以最小化總成本。
+> 這篇使用基於深度強化式學習的方式，但他假設只有一台MEC並且該MEC能夠完全覆蓋所有的使用者以及UAV的數量足夠覆蓋全部使用者，並從中去挑加權和最小的選擇，沒有考慮到MEC會有覆蓋不完整的情形，且無UAV的路徑規劃。
+
+[**Task Offloading and Trajectory Control for UAV-Assisted Mobile Edge Computing Using Deep Reinforcement Learning**](https://ieeexplore.ieee.org/document/9395130)   
+提出了一種深度強化學習模型來學習並優化任務卸載和UAV軌跡控制，讓Agent試圖在任務過期之前最大化處理的任務數量，並同時最小化能源和時間消耗。
+> 和上篇一樣都是基於深度強化式學習(DRL)去做的，但是這篇沒有固定式MEC只有用一台UAV當作MEC設備的角色。
+
+[**A Joint Trajectory and Computation Offloading Scheme for UAV-MEC Networks via Multi-Agent Deep Reinforcement Learning**](https://ieeexplore.ieee.org/document/10278822)   
+提出了多代理聯合軌跡和計算卸載（MA-TACO）方案，該方案共同優化了UAVs的軌跡和計算卸載策略，並且藉由多代理深度強化學習方法（OMADRL）優化每個UAV可以自主學習軌跡決策以適應動態需求，減少動作空間維度，並使每個UAV更快地實現最佳策略。
