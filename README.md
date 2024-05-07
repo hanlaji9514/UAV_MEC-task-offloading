@@ -2,11 +2,6 @@
 [**Task Offloading and Trajectory Scheduling for UAV-Enabled MEC Networks: An Optimal Transport Theory Perspective**](https://ieeexplore.ieee.org/document/9585571)   
 提出了一個適用於無人機啟用的MEC網絡的任務卸載框架。通過利用無人機的懸停和移動能力，可以向網絡的所有子區域中的設備提供任務卸載服務。為了延長無人機的運行時間和相關網絡的壽命，制定了一個優化問題，通過聯合區域劃分和無人機軌跡安排來最小化無人機的總能耗。將其分解為兩個獨立的子問題，區域劃分和無人機軌跡優化。對於第一個子問題將其建模為半離散最優運輸問題，考慮不同子區域之間的流量平衡，並提出一個迭代算法來實現最優解。然後，無人機軌跡優化子問題被建模為旅行推銷員問題，以確定最短路線。模擬結果顯示，所提出的方案可以顯著降低無人機的能耗，同時實現適當的負載平衡。  
 Di Wang, Jie Tian, IEEE, Haixia Zhang, and Dalei Wu, "Task Offloading and Trajectory Scheduling for UAV-Enabled MEC Networks: An Optimal Transport Theory Perspective", IEEE WIRELESS COMMUNICATIONS LETTERS, VOL. 11, NO. 1, JANUARY 2022, pp. 150-154, 2022.    
-  
-[**Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management**](https://ieeexplore.ieee.org/document/9804231)  
-提出了一種由IoT設備、UAV-BS、邊緣雲和數據中心組成的能源高效的UAV啟用MEC網絡，並提出了一種Green-UAV-CoCaCo算法，以共同優化UAV的通信、緩存和計算以提高能源效率（EE）。基於貪婪算法設計了一個UAV軌跡模型，用於預測用戶的坐標並選擇適當的邊緣服務器進行任務卸載。然後，提出了UAV-CoCaCo算法，以極大化任務緩存和卸載的能源效率。模擬結果展示了所提算法的有效性。  
-Gaoxiang Wu, Qiang Liu , Jinfeng Xu, Yiming Miao , and Matevž Pustišek, "Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management", IEEE SENSORS JOURNAL, VOL. 22, NO. 18, 15 SEPTEMBER 2022, pp. 17565-17572, 2022.  
-> 只有這篇有用到多台UAV，並且同時去探討UAV路徑規劃和task offloading，不過是每一台無人機分開去greedy出UAV路徑規劃並且去決定要offloading到哪一個Edge server做計算，預測User會移動到那一個ES附近，成為Markov Model(馬可夫模型)(這篇有多台Edge server)，在Evaluation主要比的是Energy Consumption
 
 [**Task Offloading in UAV-Aided Edge Computing: Bit Allocation and Trajectory Optimization**](https://ieeexplore.ieee.org/document/8607062)  
 考慮了一個由多個移動用戶和一個UAV組成的MEC系統，其中UAV可以在空中移動並提供計算服務。作者將系統能耗最小化問題轉化為一個混合整數非凸優化問題，並提出了一種替代優化算法，該算法共同優化了任務卸載決策、傳輸期間的位元分配以及UAV的軌跡。數值結果顯示了所提方案的顯著節能效果。  
@@ -21,6 +16,11 @@ Fuhui Zhou, Yongpeng Wu, Haijian Sun, Zheng Chu, ""UAV-Enabled Mobile Edge Compu
 研究了一種無人機(UAV)支援的移動邊緣網路，其中UAV具有固定翼或旋翼，被派遣提供通信和移動邊緣計算(MEC)服務給地面終端(GTs)。為了最小化能耗以延長UAV的續航力，利用聯合優化其3D軌跡和GTs之間的任務緩存策略，以節省飛行推進和GT任務所花費的能量。這種聯合軌跡-任務-緩存問題難以被最優解決，因為它是非凸的，並涉及多個約束。為了解決這個問題，將任務卸載和緩存的優化重新表述為兩個可處理的線性規劃(LP)問題，並將UAV軌跡的優化分別分解為三個凸二次受限二次規劃(QCQP)問題，分別是水平軌跡、垂直軌跡和UAV的飛行時間。然後提出了一種基於塊坐標下降法的算法，通過一個連續凸優化(SCO)過程迭代地求解形成的子問題。在算法收斂到預定精度後，就可以得到聯合問題的一個高品質次優解。數值結果顯示，所提出的解決方案顯著優於基準解決方案。  
 Haibo Mei, Kezhi Wang, Dongdai Zhou, Kun Yang, "Joint Task Offloading and Trajectory Optimization for UAV-Enabled Mobile Edge Computing," in IEEE Access, vol. 7, pp. 156476-156488, 2020.
 
+# Aim to Energy Consumption
+[**Energy-saving Algorithmof UAVsinTaskOffloading of UAV-assisted Mobile EdgeComputing**](https://ieeexplore.ieee.org/document/9887499)  
+提出了一種具有雙向偏好列表的匹配遊戲算法，根據卸載到UAV能節省的延遲和能源消耗的加權總和評分建立偏好列表，UAV根據評分由而低接受使用者請求藉此完成卸載配對，以最小化能量總成本。
+> 這篇假設無人機跟使用者都不會動，沒有固定式MEC。(我覺得這篇原本看能不能delay跟energy兩者都贏，但最後只贏Energy而已因為他的加權總合評分有Delay跟Energy兩部分)
+
 # With Deep Learning
 [**Unmanned-Aerial-Vehicle-Assisted Computation Offloading for Mobile Edge Computing Based on Deep Reinforcement Learning**](https://ieeexplore.ieee.org/document/9212373)   
 提出了基於深度強化學習（UACODRL）的UAV輔助MEC計算卸載，以最小化總成本，該成本是延遲、能源消耗和頻寬成本的加權和。我們首先使用K-Means算法進行分類以降低動作空間的維度。隨後，使用UACODRL找到接近最優的卸載方案以最小化總成本。
@@ -32,3 +32,25 @@ Haibo Mei, Kezhi Wang, Dongdai Zhou, Kun Yang, "Joint Task Offloading and Trajec
 
 [**A Joint Trajectory and Computation Offloading Scheme for UAV-MEC Networks via Multi-Agent Deep Reinforcement Learning**](https://ieeexplore.ieee.org/document/10278822)   
 提出了多代理聯合軌跡和計算卸載（MA-TACO）方案，該方案共同優化了UAVs的軌跡和計算卸載策略，並且藉由多代理深度強化學習方法（OMADRL）優化每個UAV可以自主學習軌跡決策以適應動態需求，減少動作空間維度，並使每個UAV更快地實現最佳策略。
+
+[**UAV-Assisted MEC System Considering UAV Trajectory and Task Offloading Strategy**](https://ieeexplore.ieee.org/document/10279045)
+設計了一種聯合優化算法來優化用戶的任務卸載策略和UAV的軌跡。採用差分演化（DE）算法，根據用戶位置和UAV位置獲得每個用戶在當前時隙的卸載策略。並使用樂觀演員-評論家（OAC）算法，該算法可以最小化系統的能源消耗和延遲的加權總和得出最優的UAV軌跡路徑。
+> 這篇論文僅在所有使用者皆固定不動的情況下提出解決方案，但是這篇沒有固定式MEC只有用一台UAV當作MEC設備的角色。這篇論文的UAV會偏向在使用者密集的地方得出彎曲的路徑以增加UAV在這塊區域的時間、在稀疏的地方以較平滑的軌跡快速通過
+
+# UAV Energy Harvesting
+UAV Energy Harvesting可用於災害環境，斷電時若使用者UE的電量不足能夠以Energy Harvesting的方式發送能量灌溉到UE身上。
+
+[**Dynamic Offloading and Trajectory Control for UAV-Enabled Mobile Edge Computing System With Energy Harvesting Devices**](https://ieeexplore.ieee.org/document/9814972)
+考慮使用者有電量的問題，在電量為一定threshold下使用者就沒辦法進行local的計算，UAV除了有MEC設備的角色還能夠將能量灌溉到使用者上使其獲得能量以繼續進行計算，本論文提出的PLOT(perturbed Lyapunov optimization-based offloading and trajectory)採用了擾動Lyapunov優化方法降低問題的複雜度找到問題的可行解以降低UAV飛行推進的能源消耗和提高系統吞吐量而且還維持了UAV數據隊列(Queue)的穩定性。例如PLOT算法將指導UAV更頻繁地訪問能源率較低的UE，以平衡不均勻的能源水平。
+> 目標只討論到UAV飛行推進能源消耗最小化，假設UAV用於Computing和Energy harvesting的能量都直接從再生能源取得(無限)，這感覺有點不切實際
+
+[**Computational Efficiency Maximization for UAV-Assisted MEC Networks With Energy Harvesting in Disaster Scenarios**](https://ieeexplore.ieee.org/document/9814972)
+考慮了一種具有能源收集（EH）的UAV輔助的MEC網絡將source能量分為能量灌溉及資訊傳輸兩部分，採用k-means聚類來確定UAV的最優位置並確定用戶與UAV的關聯連接。在第三階段，我們使用第一階段的最優UAV位置和第二階段的用戶關聯指標來確定UE的最優功率和卸載時間，然後進行線性化並使用內點方法來解決產生的線性優化問題。
+> 提到加入EH能夠讓效果變好，但這種EH通常都沒有討論UAV的能量問題。
+
+# The Main Opponent
+[**Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management**](https://ieeexplore.ieee.org/document/9804231)  
+提出了一種由IoT設備、UAV-BS、邊緣雲和數據中心組成的能源高效的UAV啟用MEC網絡，並提出了一種Green-UAV-CoCaCo算法，以共同優化UAV的通信、緩存和計算以提高能源效率（EE）。基於貪婪算法設計了一個UAV軌跡模型，用於預測用戶的坐標並選擇適當的邊緣服務器進行任務卸載。然後，提出了UAV-CoCaCo算法，以極大化任務緩存和卸載的能源效率。模擬結果展示了所提算法的有效性。  
+Gaoxiang Wu, Qiang Liu , Jinfeng Xu, Yiming Miao , and Matevž Pustišek, "Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management", IEEE SENSORS JOURNAL, VOL. 22, NO. 18, 15 SEPTEMBER 2022, pp. 17565-17572, 2022.  
+> 只有這篇有用到多台UAV，並且同時去探討UAV路徑規劃和task offloading，不過是每一台無人機分開去greedy出UAV路徑規劃並且去決定要offloading到哪一個Edge server做計算，預測User會移動到那一個ES附近，成為Markov Model(馬可夫模型)(這篇有多台Edge server)，在Evaluation主要比的是Energy Consumption
+
