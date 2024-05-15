@@ -16,7 +16,7 @@ Fuhui Zhou, Yongpeng Wu, Haijian Sun, Zheng Chu, ""UAV-Enabled Mobile Edge Compu
 本文提出了一種新的能源消耗最小化方案，用於考慮對抗主動側聽的安全UAV啟用的MEC網絡。UAV服務器支持TUs完成他們的數據計算，主動UAV側聽者參與側聽TUs的機密數據並廣播攻擊信息以降低TUs的卸載品質。干擾產生器發出人工干擾信號以對抗主動UAV側聽者的側聽。通過考慮所有TUs數據的安全計算，通過設計動態UAV服務器軌跡，本地計算和卸載計算優化實現了安全UAV啟用的MEC網絡的能源消耗加權和(為UAV飛行與任務運算、卸載之加權和)最小化。
 > 用干擾產生器對抗監聽攻擊有點怪，只有一台無人機，比較的baseline就是沒有進行路徑規劃(所以重點是在路經規劃嗎？)
 
-[**Joint Task Offloading and Trajectory Optimization for UAV-Enabled Mobile Edge Computing**](https://ieeexplore.ieee.org/document/8883173)  
+[**Joint Trajectory-Task-Cache Optimization in UAV-Enabled Mobile Edge Networks for Cyber-Physical System**](https://ieeexplore.ieee.org/document/8883173)  
 研究了一種無人機(UAV)支援的移動邊緣網路，其中UAV具有固定翼或旋翼，被派遣提供通信和移動邊緣計算(MEC)服務給地面終端(GTs)。為了最小化能耗以延長UAV的續航力，利用聯合優化其3D軌跡和GTs之間的任務緩存策略，以節省飛行推進和GT任務所花費的能量。這種聯合軌跡-任務-緩存問題難以被最優解決，因為它是非凸的，並涉及多個約束。為了解決這個問題，將任務卸載和緩存的優化重新表述為兩個可處理的線性規劃(LP)問題，並將UAV軌跡的優化分別分解為三個凸二次受限二次規劃(QCQP)問題，分別是水平軌跡、垂直軌跡和UAV的飛行時間。然後提出了一種基於塊坐標下降法的算法，通過一個連續凸優化(SCO)過程迭代地求解形成的子問題。在算法收斂到預定精度後，就可以得到聯合問題的一個高品質次優解。數值結果顯示，所提出的解決方案顯著優於基準解決方案。  
 Haibo Mei, Kezhi Wang, Dongdai Zhou, Kun Yang, "Joint Task Offloading and Trajectory Optimization for UAV-Enabled Mobile Edge Computing," in IEEE Access, vol. 7, pp. 156476-156488, 2020.
 
