@@ -60,7 +60,7 @@ UAV Energy Harvesting可用於災害環境，斷電時若使用者UE的電量不
 [**Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management**](https://ieeexplore.ieee.org/document/9804231)  
 提出了一種由IoT設備、UAV-BS、邊緣雲和數據中心組成的能源高效的UAV啟用MEC網絡，並提出了一種Green-UAV-CoCaCo算法，以共同優化UAV的通信、緩存和計算以提高能源效率（EE）。基於貪婪算法設計了一個UAV軌跡模型，用於預測用戶的坐標並選擇適當的邊緣服務器進行任務卸載。然後，提出了UAV-CoCaCo算法，以極大化任務緩存和卸載的能源效率。模擬結果展示了所提算法的有效性。  
 Gaoxiang Wu, Qiang Liu , Jinfeng Xu, Yiming Miao , and Matevž Pustišek, "Energy Efficient Task Caching and Offloading in UAV-Enabled Crowd Management", IEEE SENSORS JOURNAL, VOL. 22, NO. 18, 15 SEPTEMBER 2022, pp. 17565-17572, 2022.  
-> 只有這篇有用到多台UAV，並且同時去探討UAV路徑規劃和task offloading，不過是每一台無人擴張，在Evaluation中分別為其兩篇論文的環境進行擴展，機分開去greedy出UAV路徑規劃並且去決定要offloading到哪一個Edge server做計算，預測User會移動到那一個ES附近，成為Markov Model(馬可夫模型)(這篇有多台Edge server)，在Evaluation主要比的是Energy Consumption
+> 只有這篇有用到多台UAV，並且同時去探討UAV路徑規劃和task offloading，不過是每一台無人機分開去greedy出UAV路徑規劃並且去決定要offloading到哪一個Edge server做計算，預測User會移動到那一個ES附近，在Evaluation中分別為兩篇論文的環境進行擴展(這篇有多台Edge server)，在Evaluation主要比的是Energy Consumption
 
 [**Vehicular Computation Offloading in UAV-enabled MEC Systems**](https://ieeexplore.ieee.org/document/9776115) 
 該文提出了一種基於貪婪啟發式（GH）的動態排程框架（GHDSF），本文目標為最小化其目標函數為延遲與能量消耗的加權和，在排程過程中，每個任務都被安排到對目標函數貢獻最小的目的地。並與基於博弈理論的無人機輔助車輛計算成本優化（UVCO）算法進行比較。實驗結果顯示優於UVCO。主要原因可能是UVCO在安排任務時沒有考慮到分配出去的工作的工作負載。
